@@ -1,0 +1,92 @@
+---
+const gameDescription = "Découvrez un univers enchanteur où vous incarnez Pixel, un chat curieux et aventurier. Explorez des niveaux remplis d’énigmes et de défis, tout en aidant Pixel à retrouver son chemin dans un monde magique.";
+const catInfo = {
+  name: "Pixel",
+  image: "/images/da_cat_vibrant.png",
+  description: "Pixel est un chat espiègle et intrépide. Toujours prêt à bondir vers de nouvelles aventures, il explore le monde avec curiosité et malice !"
+};
+const humainInfo = {
+  name: "Glinda",
+  image: "/images/glind.png",
+  description: "Pixel est un chat espiègle et intrépide. Toujours prêt à bondir vers de nouvelles aventures, il explore le monde avec curiosité et malice !"
+};
+---
+
+<section class="game-container">
+  <div class="game-description">
+    <h2>À propos du jeu</h2>
+    <p>{gameDescription}</p>
+  </div>
+
+  <div class="cat-presentation">
+    <img src={catInfo.image} alt={`Image de ${catInfo.name}`} />
+    <div class="cat-info">
+      <h3>{catInfo.name}</h3>
+      <p>{catInfo.description}</p>
+    </div>
+  </div>
+
+  <div class="cat-presentation">
+    <div class="cat-info humain-info">
+      <h3>{humainInfo.name}</h3>
+      <p>{humainInfo.description}</p>
+    </div>
+    <img src={humainInfo.image} alt={`Image de ${humainInfo.name}`} />
+  </div>
+</section>
+
+<style>
+  .game-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .game-description {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .game-description h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-secondary);
+  }
+
+  .cat-presentation {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    color: var(--color-secondary);
+  }
+
+  .cat-presentation img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .cat-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .humain-info {
+    text-align: end;
+  }
+
+  @media (max-width: 600px) {
+    .cat-presentation {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
