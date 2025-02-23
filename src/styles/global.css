@@ -6,6 +6,27 @@
   --color-cream: #f1e7dd;
 }
 
+@font-face {
+  font-family: 'AdigianaUI';
+  src: url('/fonts/AdigianaUI.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +39,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--color-cream);
   color: #333;
   padding-top: 70px; /* Add space for fixed navbar */
@@ -32,4 +53,13 @@ body {
 
 .section {
   padding: 4rem 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.special-text {
+  font-family: 'AdigianaUI', sans-serif;
 }
