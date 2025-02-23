@@ -55,11 +55,7 @@ body {
   padding: 4rem 0;
 }
 
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
-
-.special-text {
+h1, h2 {
   font-family: 'AdigianaUI', sans-serif;
+  font-weight: bold;
 }
