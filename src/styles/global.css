@@ -1,0 +1,35 @@
+:root {
+  --color-primary: #c8b6ff;
+  --color-secondary: #de6c34;
+  --color-accent: #b6ccfe;
+  --color-pink: #ea9ab2;
+  --color-cream: #f1e7dd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-cream);
+  color: #333;
+  padding-top: 70px; /* Add space for fixed navbar */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
