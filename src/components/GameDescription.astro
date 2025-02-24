@@ -10,6 +10,11 @@ const humainInfo = {
   image: "/images/glind.png",
   description: "Glinda est l’une des deux maîtresses de Pixel. C’est elle qui a décidé d’adopter un chat pour se sentir moins seule lorsque sa partenaire part en voyage d’affaires. Seulement, elle ne s’attendait pas à ce que cette petite créature demande autant d’attention... mais elle l’adore quand même."
 };
+const jadeInfo = {
+  name: "Jade",
+  image: "/images/jade.png",
+  description: "Jade est la deuxième maîtresse de Pixel.  Elle voyage beaucoup et adore lire, elle finit la plupart de ces journées à lire des livres dans le salon quand elle rentre chez elle. Jade est plus méfiante vis à vis de Pixel, elle le voit comme un chat démoniaque qui ne cherche qu'à saccager la maison."
+};
 ---
 <div class="game-main-container">
   <section class="game-container" id="game">
@@ -26,19 +31,27 @@ const humainInfo = {
       </div>
     </div>
   
-    <div class="cat-presentation humain-presentation">
+    <div class="cat-presentation">
       <div class="cat-info humain-info">
         <h3>{humainInfo.name}</h3>
         <p>{humainInfo.description}</p>
       </div>
       <img src={humainInfo.image} alt={`Image de ${humainInfo.name}`} />
     </div>
+
+    <div class="cat-presentation humain-presentation">
+      <img src={jadeInfo.image} alt={`Image de ${jadeInfo.name}`} />
+      <div class="cat-info">
+        <h3>{jadeInfo.name}</h3>
+        <p>{jadeInfo.description}</p>
+      </div>
+    </div>
   </section>  
 </div>
 
 <style>
   .game-main-container {
-    background-image: url("/public/images/pattern-beige.png");
+    background-image: url("/images/pattern-beige.png");
   }
   .game-container {
     max-width: 800px;

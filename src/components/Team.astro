@@ -4,37 +4,43 @@ const team = [
     name: 'Donovan Viger',
     role: 'Développeur',
     image: '/images/donovan.jpg',
-    description: "Il a donné vie à notre chat préféré en développant le jeu !"
+    description: "Il a donné vie à notre chat préféré en développant le jeu !",
+    keywords: ['Unity', 'C#', "Site Web"]
   },
   {
     name: 'Baptiste Rouzic',
     role: 'Graphiste',
     image: '/images/baptiste.jpg',
-    description: "L'identité visuelle du jeu, c'est lui ! Il a conçu tout l'univers graphique et ses supports visuels."
+    description: "L'identité visuelle du jeu, c'est lui ! Il a conçu tout l'univers graphique et ses supports visuels.",
+    keywords: ['Graphisme', 'Illustration']
   },
   {
     name: 'Tanguy Poulain',
     role: 'Développeur',
     image: '/images/tanguy.jpg',
-    description: "Il imagine et développe des mécaniques de jeu immersives ainsi que des éléments narratifs captivants."
+    description: "Il imagine et développe des mécaniques de jeu immersives ainsi que des éléments narratifs captivants.",
+    keywords: ['Unity', 'Game Dev', 'C#']
   },
   {
     name: 'Emma Roizot',
     role: 'Artiste 3D',
     image: '/images/emma.jpg',
-    description: "Elle a créé tout l'environnement du premier niveau et donné une apparence à Pixel !"
+    description: "Elle a créé tout l'environnement du premier niveau et donné une apparence à Pixel !",
+    keywords: ['3D', 'Modélisation',"Site Web"]
   },
   {
     name: 'Camille Guillemard',
     role: 'Chargée de communication',
     image: '/images/camille.jpg',
-    description: "Elle partage l'aventure du jeu avec la communauté et met en avant notre adorable personnage félin."
+    description: "Elle partage l'aventure du jeu avec la communauté et met en avant notre adorable personnage félin.",
+    keywords: ['Community', 'Social Media']
   },
   {
     name: 'Lea Mazurier',
     role: 'Artiste 3D et chargée de communication',
     image: '/images/lea.jpg',
-    description: "Elle a conçu les décors du deuxième niveau et anime les réseaux avec ses créations."
+    description: "Elle a conçu les décors du deuxième niveau et anime les réseaux avec ses créations.",
+    keywords: ['3D', 'Communication']
   }
 ];
 ---
@@ -49,6 +55,11 @@ const team = [
             <h3>{member.name}</h3>
             <h4>{member.role}</h4>
             <p>{member.description}</p>
+            <div class="keywords">
+              {member.keywords.map(keyword => (
+                <span class="badge">{keyword}</span>
+              ))}
+            </div>
           </div>
         </div>
       ))}
@@ -105,5 +116,26 @@ const team = [
   p {
     color: #666;
     line-height: 1.6;
+  }
+
+  .keywords {
+    margin-top: 1rem;
+  }
+
+  .badge {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color .2s ease;
+  }
+
+  .badge:hover {
+    background-color: var(--color-pink);
+    color: white;
   }
 </style>
