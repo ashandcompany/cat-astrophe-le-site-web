@@ -1,5 +1,6 @@
 ---
 const currentYear = new Date().getFullYear();
+import TermsPopup from "./TermsPopup.astro";
 ---
 <footer class="footer">
   <div class="container">
@@ -17,8 +18,7 @@ const currentYear = new Date().getFullYear();
         </a>
       </div>
       <div class="footer-links">
-        <a href="/terms">Terms of Use</a>
-        <a href="/privacy">Privacy Policy</a>
+        <TermsPopup />
       </div>
       <div class="copyright">
         © {currentYear} Cat'astrophe
