@@ -1,0 +1,83 @@
+---
+const downloadLink = "/Cat'astrophe.zip"; // Remplacez par le lien de téléchargement réel
+---
+
+<!-- Section de téléchargement -->
+<section id="download">
+    <div class="download-section">
+      <h2>Téléchargez le jeu</h2>
+      <p>Prêt·e à semer le chaos avec Pixel ? Téléchargez le jeu maintenant et commencez l'aventure !</p>
+      <img src="/lol-laugh.gif" alt="Petit chat qui rigole">
+      <a href={downloadLink} class="download-button">Télécharger le jeu</a>
+    </div>
+  </section> 
+  
+  <style>
+    /* Style pour la section de téléchargement */
+    #download {
+      background-color: var(--color-cream); /* Fond clair */
+      color: black; /* Texte sombre */
+      padding: 4rem 20px;
+      text-align: center;
+    }
+  
+    /* Style pour le conteneur de la section de téléchargement */
+    .download-section {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Style pour le titre */
+    .download-section h2 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: var(--color-secondary); /* Couleur secondaire (jaune) */
+      font-weight: bold;
+    }
+  
+    /* Style pour le paragraphe */
+    .download-section p {
+      font-size: 1.25em;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+  
+    /* Style pour l'image */
+    .download-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+  
+    /* Style pour le bouton de téléchargement */
+    .download-button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.25em;
+      color: white;
+      background-color: var(--color-secondary);
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      width: 60%;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+  
+    /* Effet au survol du bouton */
+    .download-button:hover {
+      background-color: #b4511f; /* Jaune plus foncé */
+      transform: scale(1.1); /* Agrandir légèrement */
+    }
+  
+    /* Effet au clic du bouton */
+    .download-button:active {
+      transform: scale(0.95); /* Réduction au clic */
+    }
+  </style>
+  
