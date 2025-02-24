@@ -7,11 +7,15 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
     "astro": "^5.2.5",
     "lightgallery": "^2.8.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
