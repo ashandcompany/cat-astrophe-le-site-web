@@ -57,15 +57,35 @@ const imagesData = [
 
   .gallery {
     display: grid;
-    grid-template-columns: repeat(
-      3,
-      minmax(280px, 1fr)
-    ); /* Colonnes flexibles avec un minimum de 280px */
-    grid-template-rows: repeat(2,380px); /* Colonnes flexibles avec un minimum de 280px */
-    gap: 2rem; /* Espacement entre les images */
-    padding: 1rem 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: 380px;
+    gap: 2rem;
+    padding: 1rem 4rem;
     padding-bottom: 4rem;
-    justify-items: center; /* Centrer les éléments dans chaque cellule */
+    justify-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .gallery {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+  }
+
+  .gallery__image {
+    border-radius: 15px;
+  }
+
+  .gallery__caption {
+    font-size: 12px;
+    padding: 10px;
   }
 
   .gallery__link {
@@ -89,7 +109,7 @@ const imagesData = [
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    transition: .2s ease-out all;
+    transition: 0.2s ease-out all;
   }
 
   .gallery__link:hover .gallery__image {
